@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Edukasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: url('916.jpg') no-repeat center center fixed; background-size: cover;"><div id="menu">
+  <img src="Astionix.jpg" alt="Astionix">
+    <button onclick="startGame()">Mulai Game</button>
+</div>
+
+    <div id="level-selection" style="display: none;">
+        <h2>PILIH SOAL</h2>
+        <div id="levels"></div>
+    </div>
+
+    <div id="game" style="display: none;">
+        <h2 id="level-title"></h2>
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Ketik jawaban...">
+        <button onclick="checkAnswer()">Kirim Jawaban</button>
+        <p id="feedback"></p>
+        <p>Soal ke: <span id="question-number">1</span></p>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+</script>
+</body>
+</html>

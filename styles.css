@@ -1,0 +1,120 @@
+/* Reset dasar */
+body {
+    font-family: Arial, sans-serif;
+    background: #a80000;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Efek Neumorphism */
+button, input {
+    background: #d10000;
+    border: none;
+    padding: 10px 15px; /* Mengecilkan ukuran tombol */
+    font-size: 10px; /* Mengecilkan ukuran teks */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px #850000, -6px -6px 10px #ff3333;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 10px; /* Memberi jarak antar tombol */
+}
+
+button:hover {
+    box-shadow: inset 4px 4px 6px #850000, inset -4px -4px 6px #ff3333;
+    background: #b30000;
+}
+/* Input dan tombol kirim jawaban */input {
+    width: 50%;
+    max-width: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 5px #850000, inset -3px -3px 5px #ff3333;
+    color: white; /* Warna teks jawaban */
+}
+input::placeholder {
+    color: white; /* Ganti sesuai keinginan */
+    font-style: italic; /* Bisa dihapus jika tidak ingin miring */
+    opacity: 1; /* Pastikan tidak transparan */
+}
+input {
+    background: transparent; /* Membuat latar belakang transparan */
+    border: 2px solid red; /* Warna garis tepi (bisa diganti sesuai keinginan) */
+    color: white; /* Warna teks */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+    box-shadow: none; /* Hilangkan efek bayangan jika ada */
+}
+
+input::placeholder {
+    color: white; /* Warna teks placeholder */
+    font-style: italic;
+    opacity: 1;
+}
+
+/* Tampilan dalam game lebih kecil */
+#game {
+    width: 80%; /* Perkecil lebar */
+    max-width: 200px; /* Maksimal lebar */
+    padding: 15px; /* Perkecil padding */
+    border-radius: 15px; /* Perkecil sudut */
+    box-shadow: 6px 6px 12px #850000, -6px -6px 12px #ff3333; /* Efek neumorphism lebih soft */
+}
+input {
+    width: 90%; /* Menyesuaikan dengan ukuran game */
+    max-width: 150px; /* Maksimal lebar */
+}
+
+#game button {
+    width: 90%; /* Biar tombol lebih kecil sesuai kotak game */
+    max-width: 200px;{
+}
+
+/* Menu utama */
+#menu, #level-selection, #game {
+    background: #a80000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 15px #850000, -8px -8px 15px #ff3333;
+}
+
+}
+#menu img {
+    width: 250px;
+    height: 250px;
+    display: block; /* Supaya tidak terpengaruh oleh elemen lain */
+    margin: 0 auto; /* Agar gambar berada di tengah */
+}
+
+/* Level selection */
+#levels {
+    display: flex;
+    flex-direction: column; /* Susun ke bawah */
+    align-items: center; /* Pusatkan secara horizontal */
+    gap: 10px; /* Beri jarak antar level */
+}
+
+#levels button {
+    width: 200px; /* Ukuran kotak */
+    height: 50px; /* Tinggi kotak */
+    font-size: 16px; /* Ukuran teks */
+    text-align: center;
+    border-radius: 10px; /* Tetap ada efek neumorphism */
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    button {
+        width: 80%;
+    }
+}
